@@ -4,7 +4,7 @@ import React from 'react'
 const Mainpage = () => {
   return (
     <>
-     <section className='mx-44 mt-10 absolute  w-6xl'>
+     <section className='xl:mx-44 mt-10 absolute lg:left:0 left-6 flex items-center justify-center'>
       <About/>
      </section>
     </>
