@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
   
-<div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+<div className=' w-full relative h-[400vh] '>
   <DotGrid
     dotSize={3}
     gap={10}

@@ -2,7 +2,6 @@
 import { useRef, useEffect, useCallback, useMemo } from "react";
 import { gsap } from "gsap";
 import { InertiaPlugin } from "gsap/InertiaPlugin";
-import Ribbons from '../ribbons/Ribbons';
 import Mainpage from "@/app/Mainpage";
 
 gsap.registerPlugin(InertiaPlugin);
@@ -266,10 +265,12 @@ const DotGrid = ({
 
   return (
    <section
-  className={`p-4 flex items-center justify-center h-full w-full relative ${className}`}
+  className={`p-4 flex  items-center justify-center h-full w-full relative ${className}`}
   style={{
     ...style,
     background: "linear-gradient(90deg,rgba(87, 87, 87, 1) 0%, rgba(149, 152, 158, 1) 50%, rgba(61, 61, 61, 1) 99%);"
+
+    
   }}
 >
       <div ref={wrapperRef} className="w-full h-full relative">
@@ -279,18 +280,6 @@ const DotGrid = ({
         />
         <Mainpage/>
 
-
-
-  <Ribbons
-    baseThickness={48}
-    colors={['#444']}
-    speedMultiplier={0.5}
-    maxAge={700}
-    enableFade={true}
-    enableShaderEffect={false}
-  />
-
-     
 
       </div>
     </section>

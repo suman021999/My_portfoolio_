@@ -1,9 +1,12 @@
+import About from '@/components/About/About'
 import React from 'react'
 
 const Mainpage = () => {
   return (
     <>
-     <div className='bg-[#3b3b3bda]'></div>
+     <section className='mx-44 mt-10 absolute  w-6xl'>
+      <About/>
+     </section>
     </>
   )
 }
