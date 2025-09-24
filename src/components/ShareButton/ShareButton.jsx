@@ -1,77 +1,62 @@
 "use client";
 import { useState } from "react";
-import {
-  FaShare,
-  FaGithub,
-  FaTwitter,
-  FaLinkedin,
-  FaFileAlt,
-} from "react-icons/fa";
+import { FaShare, FaGithub, FaTwitter, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import { shareLinks } from "@/app/data";
+
+// map icon name → actual component (with color)
+const icons = {
+  FaGithub: (props) => <FaGithub className="text-gray-800" {...props} />,
+  FaTwitter: (props) => <FaTwitter className="text-blue-400" {...props} />,
+  FaFileAlt: (props) => <FaFileAlt className="text-amber-600" {...props} />,
+  FaLinkedin: (props) => <FaLinkedin className="text-blue-700" {...props} />,
+};
 
 const ShareButton = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const shareLinks = [
-    {
-      icon: <FaGithub className="text-gray-800" />,
-      color: "hover:bg-gray-100",
-    },
-    {
-      icon: <FaTwitter className="text-blue-400" />,
-      color: "hover:bg-blue-50",
-    },
-    {
-      icon: <FaFileAlt className="text-amber-600" />,
-      color: "hover:bg-amber-50",
-      label: "Resume",
-    },
-    {
-      icon: <FaLinkedin className="text-blue-700" />,
-      color: "hover:bg-blue-100",
-    },
-  ];
-
   return (
-    <>
-      <div className="relative group">
-        {/* Main Share Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center 
+    <div className="relative group">
+      {/* Main Share Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center 
                  hover:bg-gray-50 transition-all duration-300 z-10 relative"
-        >
-          <FaShare
-            className={`text-gray-600 transition-transform ${
-              isOpen ? "rotate-45" : ""
-            }`}
-          />
-        </button>
-
-        {/* Circular Share Options */}
-        <div
-          className={`absolute top-0 left-0 transition-all duration-500 ${
-            isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+      >
+        <FaShare
+          className={`text-gray-600 transition-transform ${
+            isOpen ? "rotate-45" : ""
           }`}
-        >
-          {shareLinks.map((link, index) => (
-            <button
+        />
+      </button>
+
+      {/* Circular Share Options */}
+      <div
+        className={`absolute top-0 left-0 transition-all duration-500 ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {shareLinks.map((link, index) => {
+          const Icon = icons[link.icon];
+          return (
+            <a
               key={index}
-              className={`absolute w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center
-                      transition-all duration-300 ${link.color} ${
-                link.label ? "has-tooltip" : ""
-              }`}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center
+                         transition-all duration-300"
               style={{
                 transform: isOpen
                   ? `translate(
-                    calc(cos(${index * 90 * (Math.PI / 180)}) * 3.5rem), 
-                    calc(sin(${index * 90 * (Math.PI / 180)}) * 3.5rem)
-                  )`
+                      calc(cos(${index * 90 * (Math.PI / 180)}) * 3.5rem), 
+                      calc(sin(${index * 90 * (Math.PI / 180)}) * 3.5rem)
+                    )`
                   : "translate(0, 0)",
                 transitionDelay: isOpen ? `${index * 75}ms` : "0ms",
               }}
               aria-label={link.label || undefined}
             >
-              {link.icon}
+              {Icon && <Icon size={18} />}
               {link.label && (
                 <span
                   className="tooltip absolute right-full mx-2 ml-2 top-1/2 -translate-y-1/2 
@@ -80,12 +65,14 @@ const ShareButton = () => {
                   {link.label}
                 </span>
               )}
-            </button>
-          ))}
-        </div>
+            </a>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 };
 
 export default ShareButton;
+
+

@@ -5,7 +5,7 @@ import Tech_stack from "../Tech_Stack/Tech_stack";
 
 export default function GridBackground() {
   return (
-    <div className="relative flex flex-col  items-start  w-full   bg-black overflow-hidden">
+    <div className="relative flex flex-col  items-start  w-full overflow-hidden    bg-gradient-to-b from-black via-gray-700 to-black">
       {/* Grid */}
       <div
         className="absolute inset-0 z-0"
