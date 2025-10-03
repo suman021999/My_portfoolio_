@@ -78,7 +78,7 @@ export const shareLinks = [
   {
     icon: "FaFileAlt",
     label: "Resume",
-    href: "/resume.pdf",
+    href: "https://drive.google.com/file/d/1jBX8B91MLHOr92knlqHL327yVdWNuFBs/view?usp=sharing",
   },
   {
     icon: "FaLinkedin",
