@@ -8,7 +8,7 @@ export const projects = [
     desc: "Shorts with comments web app",
     status: "Live",
     tags: ["React Js", "Tailwind CSS", "Express Js", "MongoDb"],
-    img: "/projects/Funtube.png",
+    img: "/projects/funtube.png",
     link: "https://youtube-shorts-bww3.vercel.app",
     href: "https://github.com/suman021999/Youtube-shorts",
   },
