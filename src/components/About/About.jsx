@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import myimage from "@/../public/bg.jpg";
 import Image from "next/image";
 import DigitalClock from "../DigitalClock/DigitalClock";
 import ShareButton from "../ShareButton/ShareButton";
@@ -60,7 +59,10 @@ const About = () => {
         <div className="flex mr-20 md:mr-0">
           <Image
             className="rounded-full w-48 h-48"
-            src={myimage}
+            src="/bg.jpg"
+            width={192}
+            height={192}
+            priority
             alt="profile"
           />
         </div>
@@ -89,5 +91,3 @@ const About = () => {
 };
 
 export default About;
-
-
