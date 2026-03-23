@@ -62,6 +62,45 @@ export const projects = [
     link: "https://crypto-currency-vert-tau.vercel.app/",
     href: "https://github.com/suman021999/crypto-currency-",
   },
+  {
+    id:7,
+    title: "GRIM House",
+    desc: "GRIM Auction House ",
+    status: "Live",
+    tags: ["React js", "Tailwind CSS", "socket.io", "Express Js", "MongoDb"],
+    img: "/projects/Auction.png",
+    link: "https://contact-management-lilac-nine.vercel.app",
+    href: "https://github.com/suman021999/Grim-auction-house",
+  },
+  {
+    id:8,
+    title: "Contact Manager",
+    desc: "Contact Manager system",
+    status: "Live",
+    tags: ["React js", "Tailwind CSS",  "Express Js", "MongoDb"],
+    img: "/projects/Cmanager.png",
+    link: "https://grim-auction-house.vercel.app",
+    href: "https://github.com/suman021999/Contact-Management",
+  },
+  {
+    id:8,
+    title: "Card degine",
+    desc: "Card degine and add color",
+    status: "Live",
+    tags: ["React js", "Tailwind CSS"],
+    img: "/projects/card.png",
+    link: "https://cards201xdfgvdfdfgdg.netlify.app/",
+    href: "https://github.com/suman021999/Card-Creator",
+  },  {
+    id:8,
+    title: "Card degine",
+    desc: "Card degine and add color",
+    status: "Live",
+    tags: ["React js", "Tailwind CSS"],
+    img: "/projects/imagefinder.png",
+    link: "https://github.com/suman021999/Image-finder",
+    href: "https://github.com/suman021999/Card-Creator",
+  },
 ];
 
 
@@ -78,7 +117,7 @@ export const shareLinks = [
   {
     icon: "FaFileAlt",
     label: "Resume",
-    href: "https://drive.google.com/file/d/1_hTx8XvQlbW8VTqagx3s1aXGSGkdhw5o/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1y3TeByKnBn-mM6HFMg5UqgCUJF9Xlr43/view?usp=sharing",
   },
   {
     icon: "FaLinkedin",
