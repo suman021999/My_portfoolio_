@@ -98,7 +98,7 @@ export const projects = [
     status: "Live",
     tags: ["React js", "Tailwind CSS"],
     img: "/projects/imagefinder.png",
-    link: "https://github.com/suman021999/Image-finder",
+    link: "https://imagesfin0er.netlify.app",
     href: "https://github.com/suman021999/Card-Creator",
   },
 ];
