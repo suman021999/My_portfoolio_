@@ -69,7 +69,7 @@ export const projects = [
     status: "Live",
     tags: ["React js", "Tailwind CSS", "socket.io", "Express Js", "MongoDb"],
     img: "/projects/Auction.png",
-    link: "https://contact-management-lilac-nine.vercel.app",
+    link: "https://grim-auction-house.vercel.app",
     href: "https://github.com/suman021999/Grim-auction-house",
   },
   {
